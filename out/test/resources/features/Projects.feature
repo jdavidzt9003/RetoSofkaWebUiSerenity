@@ -19,5 +19,5 @@ Feature: Creación de nuevo proyecto con dos administradores
     Then el sistema deberá confirmar la creación del nuevo proyecto
 
     Examples:
-      | username | password | customername | customerdescription  | name             | projectadmin  | projectadmin2 | description         | projectnamecopy       |
-      | Admin    | admin123 | new customer | Description customer | new project name | Mufasa T Duke | Luke Wright | Description project | The Coca-Cola Company |
+      | username | password | customername | customerdescription  | name             | projectadmin | projectadmin2 | description         | projectnamecopy     |
+      | Admin    | admin123 | new customer | Description customer | new project name | Cassidy Hope | Luke Wright   | Description project | ACME Ltd - ACME Ltd |

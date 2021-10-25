@@ -1,4 +1,5 @@
-Feature: yo como automatizador de pruebas
+Feature: Asignar vacaciones a un empleado
+  yo como automatizador de pruebas
   requiero programar el periodo de vacaciones a un empleado
   donde el sistema me arroje que ha sido exitosa la programación
 

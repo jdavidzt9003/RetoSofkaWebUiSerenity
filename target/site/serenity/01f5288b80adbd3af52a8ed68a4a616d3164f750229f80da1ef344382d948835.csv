@@ -3,3 +3,7 @@
 "Yo como automatizador de pruebas","Inicio de sesión donde el password inválido","SUCCESS","2021-10-24T22:52:37.41-05:00[America/Bogota]","0.0","10.84"
 "Yo como automatizador de pruebas","Inicio de sesión donde el usuario es inválido","SUCCESS","2021-10-24T22:52:48.255-05:00[America/Bogota]","0.0","10.62"
 "Yo como automatizador de pruebas","Inicio de sesión donde no se introducen las credenciales","SUCCESS","2021-10-24T22:52:58.918-05:00[America/Bogota]","0.0","7.12"
+"Validación de login","Inicio de sesion exitoso","SUCCESS","2021-10-25T10:48:09.417-05:00[America/Bogota]","0.0","12.6"
+"Validación de login","Inicio de sesión donde el password inválido","SUCCESS","2021-10-25T10:48:22.028-05:00[America/Bogota]","0.0","8.96"
+"Validación de login","Inicio de sesión donde el usuario es inválido","SUCCESS","2021-10-25T10:48:30.995-05:00[America/Bogota]","0.0","8.03"
+"Validación de login","Inicio de sesión donde no se introducen las credenciales","SUCCESS","2021-10-25T10:48:39.027-05:00[America/Bogota]","0.0","5.92"

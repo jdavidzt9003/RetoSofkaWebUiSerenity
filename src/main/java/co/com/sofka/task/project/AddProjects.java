@@ -85,6 +85,7 @@ public class AddProjects implements Task {
 
                 Click.on(COPY),
 
+                Scroll.to(PROJECT_NAME_COPY),
                 Enter.theValue(projectNameCopy).into(PROJECT_NAME_COPY),
 
                 Click.on(COPY_ACTIVITY)

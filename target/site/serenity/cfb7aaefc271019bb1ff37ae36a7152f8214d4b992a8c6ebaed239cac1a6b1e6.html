@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/html">
-
-
+<html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Features</title>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Serenity Reports</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -106,68 +109,47 @@
 
 
 
-    <script>
 
-        $(document).ready(function () {
+    <script class="code" type="text/javascript">$(document).ready(function () {
 
-            var scenarioTable = $('.scenario-result-table').DataTable({
-
-                "order": [],
+            $('.scenario-result-table').DataTable({
+                "order": [[0, "asc",], [3, "asc",]],
+                "pageLength": 10,
                 "language": {
                     searchPlaceholder: "Filter",
                     search: ""
+                },
+                columnDefs: [
+                    { type: 'time-elapsed-dhms', targets: 4 }
+                ]
+            });
+
+            // Results table
+            $('#test-results-table').DataTable({
+                "order": [[0, "asc",], [3, "asc",]],
+                "pageLength": 10,
+                "lengthMenu": [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]]
+            });
+
+            $('#evidence-table').DataTable({
+                searching: false,
+                paging: false,
+                info: false
+            });
+
+            $(".feature-coverage-table").DataTable({
+                searching: false,
+                paging: false,
+                info: false
+            });
+
+            $(".feature-coverage-table-with-pagination").DataTable({
+                order: [[0, "asc",]],
+                pageLength: 10,
+                language: {
+                    searchPlaceholder: "Filter",
+                    search: ""
                 }
-            });
-
-            $('.example-table table').DataTable({
-                searching: false,
-                ordering: false,
-                paging: false,
-                info: false
-            });
-
-            $('.example-table-in-scenario table').DataTable({
-                searching: false,
-                ordering: false,
-                paging: false,
-                info: false
-            });
-
-            $('#evidence-table').DataTable(
-                    {
-                        searching: false,
-                        ordering: false,
-                        paging: false,
-                        info: false
-                    }
-            );
-
-
-            $(".scenario-docs .card-body table").wrap("<div class='table-responsive'></div>");
-
-            $("#requirements-tabs").tabs();
-            $("#test-tabs").tabs();
-
-            var requirementsTree = [{"text":"yo como automatizador de pruebas","type":"feature","href":"cfb7aaefc271019bb1ff37ae36a7152f8214d4b992a8c6ebaed239cac1a6b1e6.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e5 scenarios\u003c/span\u003e"]}];
-
-            $('#tree').treeview({
-                data: requirementsTree,
-                enableLinks: true,
-                showTags: true,
-                expandIcon: "glyphicon glyphicon-folder-close",
-                collapseIcon: "glyphicon glyphicon-folder-open",
-                emptyIcon: "glyphicon glyphicon-book"
-            });
-
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".scenario-docs > div > p").html(function () {
-                var text = $(this).text().trim().split(" ");
-                var first = text.shift();
-                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
             });
         });
     </script>
@@ -186,711 +168,487 @@
     </div>
 </div>
 
-
 <div class="middlecontent">
+
+
     <div id="contenttop">
         <div class="middlebg">
-            <span class="breadcrumbs">
-            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
-
-
-
-                > <span class="truncate-40">Yo Como Automatizador De Pruebas</span>
-
+        <span class="breadcrumbs"><a href="index.html">Home</a>
+                    > Feature 
+                > <span class="truncate-60">
+                    Yo Como Automatizador De Pruebas
             </span>
+        </span>
         </div>
         <div class="rightbg"></div>
     </div>
+
     <div class="clr"></div>
-
     <!--/* starts second table*/-->
-
 <div>
     <ul class="nav nav-tabs" role="tablist">
-        <li >
-            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
         </li>
         <li >
             <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
         </li>
-        <li class="active">
-            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-10-2021 02:53</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-10-2021 10:51</span>
     <br style="clear:left"/>
 </div>
-
     <div class="clr"></div>
-
     <div id="beforetable"></div>
     <div id="results-dashboard">
-        <div class="table">
-                <div class=row">
-                    <div class="col-sm-12">
-                        <div>
-                            <div clas="table">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                    <span>
-                                            <h2><i class="fa fa-book"></i> Feature:  Yo Como Automatizador De Pruebas</h2>
-                                        </span>
-                                </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="requirementNarrativeTitle">
-                                requiero programar el periodo de vacaciones a un empleado<br />
-donde el sistema me arroje que ha sido exitosa la programación
-                            </div>
+        <div class="middlb">
+            <div class="table">
 
-                        </div>
-                    </div>
+                <h2><i class='fa fa-tags'></i> Feature: Yo Como Automatizador De Pruebas</h2>
+                <table class='overview'>
+                    <tr>
+                        <td width="375px" valign="top">
+                            <div class="test-count-summary">
+                                <div class="test-count-title">
+                                    5 test scenarios 
+                                        (including 5 rows of test data)
+                                     |
+                                        <a href="cfb7aaefc271019bb1ff37ae36a7152f8214d4b992a8c6ebaed239cac1a6b1e6.csv" title="Download CSV"> <i class="fa fa-download"
+                                                                                        title="Download CSV"></i></a>
 
 
-            <div class="row">
-                <div class="col-sm-12">
-
-                    <!-- Requirements result tabs -->
-                    <ul class="nav nav-tabs">
-                        <li class="active">
-                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
-                        </li>
-                        <li>
-                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
-                        </li>
-                    </ul>
-
-                    <!-- Specifications and Results tabs -->
-                    <div class="card border">
-                        <div class="tab-content" id="pills-tabContent">
-                            <div id="specs" class="tab-pane fade in active">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-sm-12">
-
-
-                                            <h3>Scenarios</h3>
-
-                                            <div id="toc">
-                                                <table class="table" id="toc-table">
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#e9f085ec9ea476056f25ac20a1ad7031d1987da482a9c628285edaae691d7769" title="View scenario details" >Para un empleado existente, programarle el período de vacaciones</a>
-                                                                     (1 example)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html"
-                                                                               title="View test results">
-                                                                            <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#8b9034b6a4d49d0fab0683a012907fcd0ce0156577007aa61f587faf9f14b172" title="View scenario details" >Inicio de sesion exitoso</a>
-                                                                     (1 example)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="c0b4f14df2dd59ad32f9d5b1bee448d8df291b5a19655b8f4e224a552f5175d4.html"
-                                                                               title="View test results">
-                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="c0b4f14df2dd59ad32f9d5b1bee448d8df291b5a19655b8f4e224a552f5175d4.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#182379be5f36cace4797b66eaf36afb4a38495f6e03ce4da4a65fe14631d3944" title="View scenario details" >Inicio de sesión donde el password inválido</a>
-                                                                     (1 example)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="090adb856e4bb1cc4f32304c997d482b0d2a7e177ef27c930d6032bd090cfdb9.html"
-                                                                               title="View test results">
-                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="090adb856e4bb1cc4f32304c997d482b0d2a7e177ef27c930d6032bd090cfdb9.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#b11de588427dfabb82c6c14e6b745036932901a314ec22369fc593307e236402" title="View scenario details" >Inicio de sesión donde el usuario es inválido</a>
-                                                                     (1 example)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="439308dfb4b4941f37521db6263b935dc348cf18d34d8e945ba09c89d8526351.html"
-                                                                               title="View test results">
-                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="439308dfb4b4941f37521db6263b935dc348cf18d34d8e945ba09c89d8526351.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td style="width:95%;" class="toc-title">
-                                                                <a href="#ec8e62389ee2998c4315b352d9fb00c62bc5d305735b2ee27a712e285bc86b0c" title="View scenario details" >Inicio de sesión donde no se introducen las credenciales</a>
-                                                                     (1 example)
-
-                                                            </td>
-                                                            <td style="width:5%;">
-                                                                <table>
-                                                                    <tr>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="f5b24bcefc5589727379b9fa8b3d4cde2dc05269ffc5cfccdb7b026862bde0ca.html"
-                                                                               title="View test results">
-                                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                                            </a>
-
-                                                                        
-                                                                        </td>
-                                                                        <td>
-                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
-                                                                               href="f5b24bcefc5589727379b9fa8b3d4cde2dc05269ffc5cfccdb7b026862bde0ca.html"
-                                                                               title="View test results">
-                                                                                <i class="fas fa-search-plus"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                </table>
-
-                                            </div>
-
-                                            <h3>Scenario details</h3>
-
-                                                <div class="scenario-docs card" id="e9f085ec9ea476056f25ac20a1ad7031d1987da482a9c628285edaae691d7769">
-                                                    <div class="scenario-docs card-header error" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html" title="View test results">Para un empleado existente, programarle el período de vacaciones</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p><p>Given el automatizador inicia sesión se dirige al modulo leave</p>
-<table>
-<thead>
-<tr><th>username</th><th>{username}</th></tr>
-</thead>
-<tbody>
-<tr><td>password</td><td>{password}</td></tr>
-</tbody>
-</table>
-</p>
-                                                            <p><p>Then el usuario diligencia el formulario para la programación de las vacaciones</p>
-<table>
-<thead>
-<tr><th>Employee</th><th>{Employee}</th></tr>
-</thead>
-<tbody>
-<tr><td>Entitlement</td><td>{Entitlement}</td></tr>
-</tbody>
-</table>
-</p>
-                                                            <p>When el sistema arroja que se ha agregado el empleado al periodo de vacaciones</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>username</th><th>password</th><th>Employee</th><th>Entitlement</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>Admin</td><td>admin123</td><td>Aaliyah Haq</td><td>6</td><td> </td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="scenario-docs card" id="8b9034b6a4d49d0fab0683a012907fcd0ce0156577007aa61f587faf9f14b172">
-                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="c0b4f14df2dd59ad32f9d5b1bee448d8df291b5a19655b8f4e224a552f5175d4.html" title="View test results">Inicio de sesion exitoso</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p><p>When el usuario ingresa los datos de username y password</p>
-<table>
-<thead>
-<tr><th>username</th><th>{username}</th></tr>
-</thead>
-<tbody>
-<tr><td>password</td><td>{password}</td></tr>
-</tbody>
-</table>
-</p>
-                                                            <p>Then el sistema permite el login exitoso</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>username</th><th>password</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>admin</td><td>admin123</td><td> </td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="scenario-docs card" id="182379be5f36cace4797b66eaf36afb4a38495f6e03ce4da4a65fe14631d3944">
-                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="090adb856e4bb1cc4f32304c997d482b0d2a7e177ef27c930d6032bd090cfdb9.html" title="View test results">Inicio de sesión donde el password inválido</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p><p>When el usuario ingresa el username correcto y el password inválido</p>
-<table>
-<thead>
-<tr><th>username</th><th>{username}</th></tr>
-</thead>
-<tbody>
-<tr><td>password</td><td>{password}</td></tr>
-</tbody>
-</table>
-</p>
-                                                            <p>Then el sistema no debe permitir el acceso y mostrar el mensaje de credenciales invalidas para password</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>username</th><th>password</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>admin</td><td>admin1234</td><td> </td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="scenario-docs card" id="b11de588427dfabb82c6c14e6b745036932901a314ec22369fc593307e236402">
-                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="439308dfb4b4941f37521db6263b935dc348cf18d34d8e945ba09c89d8526351.html" title="View test results">Inicio de sesión donde el usuario es inválido</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p><p>When el usuario ingresa el username inválido y el password correcto</p>
-<table>
-<thead>
-<tr><th>username</th><th>{username}</th></tr>
-</thead>
-<tbody>
-<tr><td>password</td><td>{password}</td></tr>
-</tbody>
-</table>
-</p>
-                                                            <p>Then el sistema no debe permitir el acceso y mostrar el mensaje de credenciales invalidas para para usuario</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>username</th><th>password</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>administrador</td><td>admin123</td><td> </td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="scenario-docs card" id="ec8e62389ee2998c4315b352d9fb00c62bc5d305735b2ee27a712e285bc86b0c">
-                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
-                                                        <div>
-                                                            <span class="scenario-heading">
-                                                                <a href="f5b24bcefc5589727379b9fa8b3d4cde2dc05269ffc5cfccdb7b026862bde0ca.html" title="View test results">Inicio de sesión donde no se introducen las credenciales</a>
-                                                            </span>
-                                                            <span class="scenario-result-icon">
-                                                                
-
-                                                                    <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="scenario-docs card-body">
-                                                            <p><p>When el usuario deja los campos username y password vacíos</p>
-<table>
-<thead>
-<tr><th>username</th><th>{username}</th></tr>
-</thead>
-<tbody>
-<tr><td>password</td><td>{password}</td></tr>
-</tbody>
-</table>
-</p>
-                                                            <p>Then el sistema no debe permitir el ingreso y debe arrojar el mensaje de campo vacío</p>
-                                                        <div class="examples">
-                                                            <p><p>Examples:</p>
-<div class='example-table-in-scenario'><table>
-<thead>
-<tr><th>username</th><th>password</th><th></th></tr>
-</thead>
-<tbody>
-<tr><td>&quot;&quot;</td><td>&quot;&quot;</td><td> </td></tr>
-</tbody>
-</table></div>
-</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
-                            <div id="results" class="tab-pane fade">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-sm-4">
+                            <div>
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#summary"><i class="fas fa-home"></i> Summary</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="tab" href="#tests"><i class="fas fa-tachometer-alt"></i> Test
+                                            Results</a>
+                                    </li>
+                                </ul>
 
-                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
-                                                <div class="ct-chart ct-square"></div>
-                                            </div>
-                                            <script>
 
-                                                var labels = ['80%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '20%', ' ', ' ', ' '];
-                                                // Our series array that contains series objects or in this case series data arrays
+                                <div class="card border">
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div id="summary" class="tab-pane fade in active">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-4">
+                                                            <div style="width:300px;"
+                                                                 class="chart-container automated-and-manual-results">
+                                                                <div class="ct-chart ct-square"></div>
+                                                            </div>
+                                                            <script>
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 1}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                                var labels = ['80%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '20%', ' ', ' ', ' '];
+                                                                // Our series array that contains series objects or in this case series data arrays
 
-                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
-                                                // as you saw in the previous example
-                                                var options = {
-                                                    width: 350,
-                                                    height: 300
-                                                };
+                                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 1}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
-                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                                                    new Chartist.Pie('.ct-chart', {
-                                                        series: series,
-                                                        labels: labels,
-                                                    }, {
-                                                        donut: true,
-                                                        donutWidth: 60,
-                                                        donutSolid: true,
-                                                        startAngle: 270,
-                                                        showLabel: true
-                                                    }, options);
-                                                });
+                                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                                // as you saw in the previous example
+                                                                var options = {
+                                                                    width: 350,
+                                                                    height: 300
+                                                                };
 
-                                            </script>
-                                        </div>
-                                        <div class="col-sm-8">
 
-                                        <table class="table">
-                                            <thead>
-                                            <tr>
-                                                <th scope="col">Scenario Results (including rows of test data)</th>
-                                                <th scope="col" colspan="2" class="automated-stats">
-                                                    Automated
-                                                </th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
+                                                                new Chartist.Pie('.ct-chart', {
+                                                                    series: series,
+                                                                    labels: labels
+                                                                }, {
+                                                                    plugins: [Chartist.plugins.tooltip()],
+                                                                    donut: true,
+                                                                    donutWidth: 60,
+                                                                    donutSolid: true,
+                                                                    startAngle: 270,
+                                                                    showLabel: true
+                                                                }, options);
+
+
+                                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                                    new Chartist.Pie('.ct-chart', {
+                                                                        series: series,
+                                                                        labels: labels
+                                                                    }, {
+                                                                        plugins: [Chartist.plugins.tooltip()],
+                                                                        donut: true,
+                                                                        donutWidth: 60,
+                                                                        donutSolid: true,
+                                                                        startAngle: 270,
+                                                                        showLabel: true
+                                                                    }, options);
+                                                                });
+
+
+                                                            </script>
+                                                    </div>
+                                                    <div class="col-sm-8">
+
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th scope="col">Scenario Results (including rows of test
+                                                                    data)
+                                                                </th>
+                                                                <th scope="col" colspan="2" class="automated-stats">
+                                                                    Automated
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
                                                                     <td class="aggregate-result-count">
                                                                         <a href="94fddca8575dd3ad26ea4040528976132e15b732be8e95d942adc3370405529e.html"><i
-                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
+                                                                                    class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">4</td>
-                                                <td class="automated-stats">80%</td>
-                                            </tr>
-                                            <tr>
+                                                                <td class="automated-stats">4</td>
+                                                                <td class="automated-stats">80%</td>
+                                                            </tr>
+                                                            <tr>
                                                                     <td class="aggregate-result-count"><i
-                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                                class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
                                                                     </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr>
-                                                                <td class="aggregate-result-count"><i
-                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
-                                                                </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr>
-                                                                <td class="aggregate-result-count"><i
-                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
-                                                                </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr>
-                                                                             <td colspan="3"><a href="c5c4aae355efea01607058e4eadfc172b4b5640b9af744816852ab43ff7542d4.html"><i
-                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
-                                                                            </td>
-
-                                            </tr>
-
-                                            <tr>
-                                                                <td class="aggregate-result-count indented-error-category">
-                                                                    <i
-                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
-                                                                </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            <tr>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                                class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                    </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                                class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                    </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr>
+                                                                        <td colspan="3"><a
+                                                                                    href="c5c4aae355efea01607058e4eadfc172b4b5640b9af744816852ab43ff7542d4.html"><i
+                                                                                        class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                        </td>
+                                                            </tr>
+                                                            <tr>
+                                                                    <td class="aggregate-result-count indented-error-category">
+                                                                        <i
+                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                    </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            <tr>
                                                                     <td class="aggregate-result-count indented-error-category">
                                                                         <a href="c14af6b2ff2e7e2ed4b2320c76c6cf4ff7c4fcd25b1a9ab905e1a385073c3cba.html"><i
-                                                                                class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken</a>
+                                                                                    class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken</a>
                                                                     </td>
-                                                <td class="automated-stats">1</td>
-                                                <td class="automated-stats">20%</td>
-                                            <tr>
-                                                                <td class="aggregate-result-count indented-error-category">
-                                                                    <i
-                                                                            class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
-                                                                </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
-                                            </tr>
-                                            <tr class="summary-stats">
-                                                <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">5</td>
-                                                <td class="automated-stats"></td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    </div>
+                                                                <td class="automated-stats">1</td>
+                                                                <td class="automated-stats">20%</td>
+                                                            <tr>
+                                                                    <td class="aggregate-result-count indented-error-category">
+                                                                        <i
+                                                                                class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                    </td>
+                                                                <td class="automated-stats">0</td>
+                                                                <td class="automated-stats"> </td>
+                                                            </tr>
+                                                            <tr class="summary-stats">
+                                                                <td class="aggregate-result-count">Total</td>
+                                                                <td class="automated-stats">5</td>
+                                                                <td class="automated-stats"></td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <table class="table">
-                                                    <thead>
-                                                    <tr>
-                                                        <th>Execution Time</th>
-                                                        <th>Clock Time</th>
-                                                        <th>Fastest Test</th>
-                                                        <th>Slowest Test</th>
-                                                        <th>Average Execution Time</th>
-                                                    </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                    <tr>
-                                                        <td> 1m 6s</td>
-                                                        <td> 19h  59m 39s</td>
-                                                        <td>2ms</td>
-                                                        <td>18s</td>
-                                                        <td>13s</td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <table class="table">
+                                                            <thead>
+                                                            <tr>
+                                                                <th>Execution Time</th>
+                                                                <th>Clock Time</th>
+                                                                <th>Fastest Test</th>
+                                                                <th>Slowest Test</th>
+                                                                <th>Average Execution Time</th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                            <tr>
+                                                                <td> 1m 6s</td>
+                                                                <td> 19h  59m 39s</td>
+                                                                <td>2ms</td>
+                                                                <td>18s</td>
+                                                                <td>13s</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-12">
+                                                            <h3>Functional Coverage Overview</h3>
+
+
+                                                                    <h4>Features</h4>
+
+                                                                    <table class="table feature-coverage-table"
+                                                                           id="Feature">
+                                                                        <thead>
+                                                                        <tr>
+                                                                            <th>Feature</th>
+                                                                            <th style="width:7.5em;">Scenarios</th>
+                                                                            <th style="width:7.5em;">% Pass</th>
+                                                                            <th style="width:7.5em;">Result</th>
+                                                                            <th>Coverage</th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                        <a href="4269f2cb1e88bc20b48114aef30fd88efd2872c1d3eca23f3f35277bcf693d8a.html">yo como automatizador de pruebas</a>
+                                                                                </td>
+                                                                                <td>5</td>
+                                                                                <td>80%</td>
+                                                                                <td>
+                                                                                        <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="progress">
+                                                                                            <div class="progress-bar"
+                                                                                                 role="progressbar"
+                                                                                                 style="width: 80%; background-color: #30cb23"
+                                                                                                 aria-valuenow="4"
+                                                                                                 title="80% success"
+                                                                                                 aria-valuemin="0"
+                                                                                                 aria-valuemax="100">
+                                                                                            </div>
+                                                                                            <div class="progress-bar"
+                                                                                                 role="progressbar"
+                                                                                                 style="width: 20%; background-color: darkorange"
+                                                                                                 aria-valuenow="1"
+                                                                                                 title="20% error"
+                                                                                                 aria-valuemin="0"
+                                                                                                 aria-valuemax="100">
+                                                                                            </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                        <a href="cfb7aaefc271019bb1ff37ae36a7152f8214d4b992a8c6ebaed239cac1a6b1e6.html">yo como automatizador de pruebas</a>
+                                                                                </td>
+                                                                                <td>5</td>
+                                                                                <td>80%</td>
+                                                                                <td>
+                                                                                        <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <div class="progress">
+                                                                                            <div class="progress-bar"
+                                                                                                 role="progressbar"
+                                                                                                 style="width: 80%; background-color: #30cb23"
+                                                                                                 aria-valuenow="4"
+                                                                                                 title="80% success"
+                                                                                                 aria-valuemin="0"
+                                                                                                 aria-valuemax="100">
+                                                                                            </div>
+                                                                                            <div class="progress-bar"
+                                                                                                 role="progressbar"
+                                                                                                 style="width: 20%; background-color: darkorange"
+                                                                                                 aria-valuenow="1"
+                                                                                                 title="20% error"
+                                                                                                 aria-valuemin="0"
+                                                                                                 aria-valuemax="100">
+                                                                                            </div>
+                                                                                    </div>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h3>Test Failure Overview</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <h4>Most Frequent Failures</h4>
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="error-color top-list-title">
+                                                                            <a href="b07f350bb5371ad2760661f146815e8279c467236c0fa180586d523cc2512d8f.html"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a> Invalid element state exception</a>
+                                                                        </td>
+                                                                        <td><span
+                                                                                    class="badge failure-badge">1</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <h4>Most Unstable Features</h4>
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="failure-color top-list-title"><a
+                                                                                    href="b1d8200fef02a92a8f8763435543446e761dc9ac36b3e20e8f55e56fea95ae1c.html">yo como automatizador de pruebas</a>
+                                                                        </td>
+                                                                        <td><span
+                                                                                    class="badge failure-badge">100%</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
                                             </div>
                                         </div>
+                                        <div id="tests" class="tab-pane fade">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
+                                                            <table class="scenario-result-table table"
+                                                                   id="scenario-results">
+                                                                <thead>
+                                                                <tr>
+                                                                    <th>feature</th>
+                                                                    <th class="test-name-column">Scenario</th>
+                                                                    <th>Steps</th>
+                                                                    <th>Start Time</th>
+                                                                    <th>Duration</th>
+                                                                    <th>Result</th>
+                                                                </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="scenario-result ERROR">
+                                                                        <td>
+                                                                                <a href="4269f2cb1e88bc20b48114aef30fd88efd2872c1d3eca23f3f35277bcf693d8a.html">yo como automatizador de pruebas</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html">Para un empleado existente, programarle el período de vacaciones</a>
+                                                                                (1 example)
+                                                                        </td>
+                                                                        <td>3</td>
+                                                                        <td>02:53:19</td>
+                                                                        <td>18s 751ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a> <span
+                                                                                    style="display:none">ERROR</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="4269f2cb1e88bc20b48114aef30fd88efd2872c1d3eca23f3f35277bcf693d8a.html">Yo como automatizador de pruebas</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="c0b4f14df2dd59ad32f9d5b1bee448d8df291b5a19655b8f4e224a552f5175d4.html">Inicio de sesion exitoso</a>
+                                                                                (1 example)
+                                                                        </td>
+                                                                        <td>2</td>
+                                                                        <td>22:52:18</td>
+                                                                        <td>19s 276ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="4269f2cb1e88bc20b48114aef30fd88efd2872c1d3eca23f3f35277bcf693d8a.html">Yo como automatizador de pruebas</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="090adb856e4bb1cc4f32304c997d482b0d2a7e177ef27c930d6032bd090cfdb9.html">Inicio de sesión donde el password inválido</a>
+                                                                                (1 example)
+                                                                        </td>
+                                                                        <td>2</td>
+                                                                        <td>22:52:37</td>
+                                                                        <td>10s 836ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="4269f2cb1e88bc20b48114aef30fd88efd2872c1d3eca23f3f35277bcf693d8a.html">Yo como automatizador de pruebas</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="439308dfb4b4941f37521db6263b935dc348cf18d34d8e945ba09c89d8526351.html">Inicio de sesión donde el usuario es inválido</a>
+                                                                                (1 example)
+                                                                        </td>
+                                                                        <td>2</td>
+                                                                        <td>22:52:48</td>
+                                                                        <td>10s 624ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr class="scenario-result SUCCESS">
+                                                                        <td>
+                                                                                <a href="4269f2cb1e88bc20b48114aef30fd88efd2872c1d3eca23f3f35277bcf693d8a.html">Yo como automatizador de pruebas</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="f5b24bcefc5589727379b9fa8b3d4cde2dc05269ffc5cfccdb7b026862bde0ca.html">Inicio de sesión donde no se introducen las credenciales</a>
+                                                                                (1 example)
+                                                                        </td>
+                                                                        <td>2</td>
+                                                                        <td>22:52:58</td>
+                                                                        <td>7s 119ms</td>
+                                                                        <td><a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                                    style="display:none">SUCCESS</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+                                                    </div>
+                                                </div>
 
-                                            <table class="scenario-result-table table" id="scenario-results">
-                                                <thead>
-                                                <tr>
-                                                    <th class="test-name-column">Scenario</th>
-                                                    <th>Steps</th>
-                                                    <th>Start Time</th>
-                                                    <th>Duration</th>
-                                                    <th>Result</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr class="scenario-result ERROR">
-                                                    <td>
-                                                            <a href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html">Para un empleado existente, programarle el período de vacaciones</a>
-                                                               (1 example)
-                                                    </td>
-                                                    <td>3</td>
-                                                    <td>02:53:19</td>
-                                                    <td>18s 751ms</td>
-                                                    <td>
-                                                            <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a> <span
-                                                                style="display:none">ERROR</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="scenario-result SUCCESS">
-                                                    <td>
-                                                            <a href="c0b4f14df2dd59ad32f9d5b1bee448d8df291b5a19655b8f4e224a552f5175d4.html">Inicio de sesion exitoso</a>
-                                                               (1 example)
-                                                    </td>
-                                                    <td>2</td>
-                                                    <td>22:52:18</td>
-                                                    <td>19s 276ms</td>
-                                                    <td>
-                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
-                                                                style="display:none">SUCCESS</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="scenario-result SUCCESS">
-                                                    <td>
-                                                            <a href="090adb856e4bb1cc4f32304c997d482b0d2a7e177ef27c930d6032bd090cfdb9.html">Inicio de sesión donde el password inválido</a>
-                                                               (1 example)
-                                                    </td>
-                                                    <td>2</td>
-                                                    <td>22:52:37</td>
-                                                    <td>10s 836ms</td>
-                                                    <td>
-                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
-                                                                style="display:none">SUCCESS</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="scenario-result SUCCESS">
-                                                    <td>
-                                                            <a href="439308dfb4b4941f37521db6263b935dc348cf18d34d8e945ba09c89d8526351.html">Inicio de sesión donde el usuario es inválido</a>
-                                                               (1 example)
-                                                    </td>
-                                                    <td>2</td>
-                                                    <td>22:52:48</td>
-                                                    <td>10s 624ms</td>
-                                                    <td>
-                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
-                                                                style="display:none">SUCCESS</span>
-                                                    </td>
-                                                </tr>
-                                                <tr class="scenario-result SUCCESS">
-                                                    <td>
-                                                            <a href="f5b24bcefc5589727379b9fa8b3d4cde2dc05269ffc5cfccdb7b026862bde0ca.html">Inicio de sesión donde no se introducen las credenciales</a>
-                                                               (1 example)
-                                                    </td>
-                                                    <td>2</td>
-                                                    <td>22:52:58</td>
-                                                    <td>7s 119ms</td>
-                                                    <td>
-                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
-                                                                style="display:none">SUCCESS</span>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <h3><i class="fas fa-edit"></i> Manual Tests</h3>
 
-                                            </div>
-                                        </div>
+                                                            No manual tests were recorded
 
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <h3><i class="fas fa-edit"></i> Manual Tests</h3>
-
-                                                No manual tests were recorded
-
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <span class="version">Serenity BDD version 2.2.12</span>
-                    </div>
-                </div>
-            </div>
+    </div>
+</div>
+<div id="beforefooter"></div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <span class="version">Serenity BDD version 2.2.12</span>
+        </div>
+    </div>
+</div>
+
+
 </body>
 </html>

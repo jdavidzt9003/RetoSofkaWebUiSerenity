@@ -1,4 +1,5 @@
-Feature: Yo como automatizador de pruebas
+Feature: Validación de login
+  Yo como automatizador de pruebas
   deseo probar la seccion de login de la aplicación orangeHRM
   para verificar que la página cumpla los criterios de login
 

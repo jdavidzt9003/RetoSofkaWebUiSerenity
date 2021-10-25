@@ -154,7 +154,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-10-2021 23:18</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 25-10-2021 10:21</span>
     <br style="clear:left"/>
 </div>
 
@@ -191,9 +191,9 @@ donde el sistema me permita la creación del nuevo proyecto
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon fa-2x' title='ERROR'></i></a></span>
                             <span class="test-case-title">
-                                <span class="failing-color">Agregar nuevo proyecto
+                                <span class="error-color">Agregar nuevo proyecto
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -220,7 +220,7 @@ donde el sistema me permita la creación del nuevo proyecto
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">Element should be enabled exception: Expected enabled element was not enabled</span>
+                    <span class="error-message error-message-title">Element not interactable exception: element not interactable</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
@@ -236,20 +236,13 @@ donde el sistema me permita la creación del nuevo proyecto
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException </h4>
+                    <h4>org.openqa.selenium.ElementNotInteractableException </h4>
                 </div>
                 <div class="card-body">
                     <div>
                         <pre>co.com.sofka.task.project.AddProjects.performAs(AddProjects.java:58)<br />co.com.sofka.stepdefinition.projects.ProjectsStepDefinition.agregaUnNuevoProyectoHaciendoLaCreacionDeUnClienteEIngresandoMinimoDosAdministradoresDeProyecto(ProjectsStepDefinition.java:45)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br /></pre>
                     </div>
 
-                    <h4>
-                        Caused by: org.openqa.selenium.TimeoutException
-                    </h4>
-                    <div>
-                            <pre>Expected condition failed: waiting for By.id: btnCopy to be enabled (tried for 20 second(s) with 100 milliseconds interval)</pre>
-                        <pre>co.com.sofka.task.project.AddProjects.performAs(AddProjects.java :58)<br />co.com.sofka.stepdefinition.projects.ProjectsStepDefinition.agregaUnNuevoProyectoHaciendoLaCreacionDeUnClienteEIngresandoMinimoDosAdministradoresDeProyecto(ProjectsStepDefinition.java :45)<br />io.cucumber.java.Invoker.invoke(Invoker.java :27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :54)<br /></pre>
-                    </div>
                 </div>
             </div>
         </div>
@@ -257,12 +250,12 @@ donde el sistema me permita la creación del nuevo proyecto
 
 
                 <div class="panel-body">
-                    <a href="pagesource4845205390162345621.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                    <a href="pagesource3532188825036533779.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
                 </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="74e472173ebcd3031c5687cd3809822ebbe405c571caf98e0c1dc26176ce91b7.png" title=" Example: {username=Admin, password=admin123, customername=new customer, customerdescription=Description customer, name=new project name, projectadmin=Mufasa T Duke, projectadmin2=Luke Wright, description=Description project, projectnamecopy=The Coca-Cola Company}" width="1920"/>
+                <img src="74e472173ebcd3031c5687cd3809822ebbe405c571caf98e0c1dc26176ce91b7.png" title=" Example: {username=Admin, password=admin123, customername=new customer, customerdescription=Description customer, name=new project name, projectadmin=Cassidy Hope, projectadmin2=Luke Wright, description=Description project, projectnamecopy=ACME Ltd - ACME Ltd}" width="1920"/>
                 <img src="74e472173ebcd3031c5687cd3809822ebbe405c571caf98e0c1dc26176ce91b7.png" title=" Given el usuario esta en la p&aacute;gina OrangeHRM modulo time project info
 | username | Admin |
 | password | admin123 |" width="1920"/>
@@ -276,54 +269,58 @@ donde el sistema me permita la creación del nuevo proyecto
                 <img src="eb2846573bd71052bfde21f6445121e9b686382f8ebe49e983e124b4d2447cc1.png" title=" Tester enters 'admin123' into Password" width="1920"/>
                 <img src="f98e849384745f8efa873ca05d89ba2c6d019b8662b1510185e5b186c3e3b8ec.png" title=" Tester enters 'admin123' into Password (completed)" width="1920"/>
                 <img src="f98e849384745f8efa873ca05d89ba2c6d019b8662b1510185e5b186c3e3b8ec.png" title=" Tester clicks on Boton Login" width="1920"/>
-                <img src="a0a8e32c69090ffde8c2550632a4dc116549b73c00ff4fb2d2edeb86c745ede3.png" title=" Tester clicks on Boton Login (completed)" width="1920"/>
-                <img src="a0a8e32c69090ffde8c2550632a4dc116549b73c00ff4fb2d2edeb86c745ede3.png" title=" Tester do login (completed)" width="1920"/>
-                <img src="a0a8e32c69090ffde8c2550632a4dc116549b73c00ff4fb2d2edeb86c745ede3.png" title=" Tester open projects" width="1920"/>
-                <img src="a0a8e32c69090ffde8c2550632a4dc116549b73c00ff4fb2d2edeb86c745ede3.png" title=" Tester clicks on Time" width="1920"/>
-                <img src="3ec4c4189e3081abb18d69c6592a03160fcaa1a00d8c16d57c871ec40f612167.png" title=" Tester clicks on Time (completed)" width="1920"/>
-                <img src="3ec4c4189e3081abb18d69c6592a03160fcaa1a00d8c16d57c871ec40f612167.png" title=" Tester clicks on Project Info" width="1920"/>
-                <img src="2dd2c99b2ecac49cd2c946d2f68aee96394b0430bc6159c03e4abcea52d5e1ae.png" title=" Tester clicks on Project Info (completed)" width="1920"/>
-                <img src="2dd2c99b2ecac49cd2c946d2f68aee96394b0430bc6159c03e4abcea52d5e1ae.png" title=" Tester clicks on Projects" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" Tester clicks on Projects (completed)" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" Tester open projects (completed)" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" Then validation login succesful" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" Then validation login succesful (completed)" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" Given el usuario esta en la p&aacute;gina OrangeHRM modulo time project info
+                <img src="33ccfa078c15a7da3941e29fe96ab0cd73281aa8fbe0f6d34e62bba5bb7cdca8.png" title=" Tester clicks on Boton Login (completed)" width="1920"/>
+                <img src="33ccfa078c15a7da3941e29fe96ab0cd73281aa8fbe0f6d34e62bba5bb7cdca8.png" title=" Tester do login (completed)" width="1920"/>
+                <img src="33ccfa078c15a7da3941e29fe96ab0cd73281aa8fbe0f6d34e62bba5bb7cdca8.png" title=" Tester open projects" width="1920"/>
+                <img src="33ccfa078c15a7da3941e29fe96ab0cd73281aa8fbe0f6d34e62bba5bb7cdca8.png" title=" Tester clicks on Time" width="1920"/>
+                <img src="8bf94e313ef21bc5c4573d1ce24c55ae9a32262160c8cf1a2a820e29fd37b9dc.png" title=" Tester clicks on Time (completed)" width="1920"/>
+                <img src="8bf94e313ef21bc5c4573d1ce24c55ae9a32262160c8cf1a2a820e29fd37b9dc.png" title=" Tester clicks on Project Info" width="1920"/>
+                <img src="8ee72e34adbb907dad0241c23d19556f922649aa21a3b7f65a4bb19d4d6626d0.png" title=" Tester clicks on Project Info (completed)" width="1920"/>
+                <img src="8ee72e34adbb907dad0241c23d19556f922649aa21a3b7f65a4bb19d4d6626d0.png" title=" Tester clicks on Projects" width="1920"/>
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" Tester clicks on Projects (completed)" width="1920"/>
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" Tester open projects (completed)" width="1920"/>
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" Then validation login succesful" width="1920"/>
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" Then validation login succesful (completed)" width="1920"/>
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" Given el usuario esta en la p&aacute;gina OrangeHRM modulo time project info
 | username | Admin |
 | password | admin123 | (completed)" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" When agrega un nuevo proyecto haciendo la creaci&oacute;n de un cliente e ingresando m&iacute;nimo dos administradores de proyecto
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" When agrega un nuevo proyecto haciendo la creaci&oacute;n de un cliente e ingresando m&iacute;nimo dos administradores de proyecto
 | customername | new customer |
 | customerdescription | Description customer |
 | name | new project name |
-| projectadmin | Mufasa T Duke |
+| projectadmin | Cassidy Hope |
 | projectadmin2 | Luke Wright |
 | description | Description project |
-| projectnamecopy | The Coca-Cola Company |" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" Tester add projects" width="1920"/>
-                <img src="e6064fafbc37215512e543565794afaadbfeafb315fc4924e267ac1ecdfd8cc9.png" title=" Tester clicks on Add" width="1920"/>
-                <img src="15aeb2874ec983f0e05956fb5e8b69c8c7d12934d3932a410a0c90dfcbd3d9fc.png" title=" Tester clicks on Add (completed)" width="1920"/>
-                <img src="15aeb2874ec983f0e05956fb5e8b69c8c7d12934d3932a410a0c90dfcbd3d9fc.png" title=" Tester clicks on Add customer" width="1920"/>
-                <img src="7848b9f49b98f0477155e2cba8f353430e02c72bd8363c23fe04dac8c3e1e20c.png" title=" Tester clicks on Add customer (completed)" width="1920"/>
-                <img src="13b75f6713287cb644850121f94237c75fcdb307bce03909fe6c202e09a559dd.png" title=" Tester enters 'new customer' into Name customer" width="1920"/>
-                <img src="0244744be74357ef331f82f22cd69c77fd197f8bd31ad530b0990212c15b3773.png" title=" Tester enters 'new customer' into Name customer (completed)" width="1920"/>
-                <img src="0244744be74357ef331f82f22cd69c77fd197f8bd31ad530b0990212c15b3773.png" title=" Tester enters 'Description customer' into Customer Description" width="1920"/>
-                <img src="19809b91b8e285ef28fdecbf052c2727ba5a17bbd4460e3b225dd6b747b09bda.png" title=" Tester enters 'Description customer' into Customer Description (completed)" width="1920"/>
-                <img src="19809b91b8e285ef28fdecbf052c2727ba5a17bbd4460e3b225dd6b747b09bda.png" title=" Tester clicks on Save customer" width="1920"/>
-                <img src="e6913ef73be5bd62ec787a960da0bc8c8a9fbd87b9f4ea0c0caa74cee2969f0d.png" title=" Tester clicks on Save customer (completed)" width="1920"/>
-                <img src="d9be9a65b790b8bd83d248461a5c1dcf11234e4117a1f1192f29540c56c9054f.png" title=" Tester enters 'new project name' into Project name" width="1920"/>
-                <img src="1341394a3f3e55e22e70b04d7dca91393ece6c2a6508cc35e769365925f54a04.png" title=" Tester enters 'new project name' into Project name (completed)" width="1920"/>
-                <img src="1341394a3f3e55e22e70b04d7dca91393ece6c2a6508cc35e769365925f54a04.png" title=" Tester enters 'Mufasa T Duke' into Project Admin" width="1920"/>
-                <img src="2a5a29d56a52254d2e94d490ea7add41e00bea5f9b21819a8fbdc7e8586697ef.png" title=" Tester enters 'Mufasa T Duke' into Project Admin (completed)" width="1920"/>
-                <img src="2a5a29d56a52254d2e94d490ea7add41e00bea5f9b21819a8fbdc7e8586697ef.png" title=" Tester clicks on Add another" width="1920"/>
-                <img src="6be7e9a6c8b6f2ce5a113d901df80c4d04488abc5d9ea4111be685952b1a21cb.png" title=" Tester clicks on Add another (completed)" width="1920"/>
-                <img src="6be7e9a6c8b6f2ce5a113d901df80c4d04488abc5d9ea4111be685952b1a21cb.png" title=" Tester enters 'Luke Wright' into Project Admin2" width="1920"/>
-                <img src="41f4598453143800051e558350a94abda7c05ebb6da36067e96293a8dd1da29b.png" title=" Tester enters 'Luke Wright' into Project Admin2 (completed)" width="1920"/>
-                <img src="41f4598453143800051e558350a94abda7c05ebb6da36067e96293a8dd1da29b.png" title=" Tester enters 'Description project' into Description project" width="1920"/>
-                <img src="e74e570d86db694da99c8d1d9d1d9b261b7e72ceb5bec9160e27c3317af6b0a9.png" title=" Tester enters 'Description project' into Description project (completed)" width="1920"/>
-                <img src="e74e570d86db694da99c8d1d9d1d9b261b7e72ceb5bec9160e27c3317af6b0a9.png" title=" Tester clicks on Save project" width="1920"/>
-                <img src="1fd2a82fd9f7313837cde928d9a9767bd250bd8c1da062858fa30610d940cab6.png" title=" Tester clicks on Save project (completed)" width="1920"/>
-                <img src="1fd2a82fd9f7313837cde928d9a9767bd250bd8c1da062858fa30610d940cab6.png" title=" Tester clicks on Copy" width="1920"/>
-                <img src="dd6c0bc0b21588310fee375b170ded1ee5cedfdb6a6172b7ced8738b23f5e811.png" title=" Tester clicks on Copy (completed): <span class='failing-color'>FAILURE</span>" width="1920"/>
+| projectnamecopy | ACME Ltd - ACME Ltd |" width="1920"/>
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" Tester add projects" width="1920"/>
+                <img src="a2a76952f96f339ebd126eddf19c940ae1beb2015e3c9880656e1f77b42a6379.png" title=" Tester clicks on Add" width="1920"/>
+                <img src="069fb873dfb87ea9a12c8fff811163847d4dc32e97dffe3f0bba11a317f89736.png" title=" Tester clicks on Add (completed)" width="1920"/>
+                <img src="069fb873dfb87ea9a12c8fff811163847d4dc32e97dffe3f0bba11a317f89736.png" title=" Tester clicks on Add customer" width="1920"/>
+                <img src="67f85cac7e625e6d0707ba6929910872c170d813669a4cde4a3a560cb5e02ee4.png" title=" Tester clicks on Add customer (completed)" width="1920"/>
+                <img src="116d79ffe31afe628f3821bc8bd937b78ce0619923d530ae904fc8d7431d2c53.png" title=" Tester enters 'new customer' into Name customer" width="1920"/>
+                <img src="c415c2f87cb86e1cb4a3252f65f8a6cf52905ed7c681d84373d444a0d4033e93.png" title=" Tester enters 'new customer' into Name customer (completed)" width="1920"/>
+                <img src="c415c2f87cb86e1cb4a3252f65f8a6cf52905ed7c681d84373d444a0d4033e93.png" title=" Tester enters 'Description customer' into Customer Description" width="1920"/>
+                <img src="2e14e0d65d3b70deaeb65528289bd561e044c7eeb791d6704b0c3c88b24e4b4d.png" title=" Tester enters 'Description customer' into Customer Description (completed)" width="1920"/>
+                <img src="2e14e0d65d3b70deaeb65528289bd561e044c7eeb791d6704b0c3c88b24e4b4d.png" title=" Tester clicks on Save customer" width="1920"/>
+                <img src="c02b0a6075949892d546dcf21a77d73889bcb43d4639fd3e448bc3b19988ef61.png" title=" Tester clicks on Save customer (completed)" width="1920"/>
+                <img src="0e0245621d1dbae50ac441af0cfae81995df2acd196473c8b25b896681a4867b.png" title=" Tester enters 'new project name' into Project name" width="1920"/>
+                <img src="77a22d9bc0bb522ff38d5d052d7260f6832324eb4c441ae1167b2aac4f52374d.png" title=" Tester enters 'new project name' into Project name (completed)" width="1920"/>
+                <img src="77a22d9bc0bb522ff38d5d052d7260f6832324eb4c441ae1167b2aac4f52374d.png" title=" Tester enters 'Cassidy Hope' into Project Admin" width="1920"/>
+                <img src="d9e55e89bfa1455970b2f6a085a069169ef3330d1f8676321354e9bada149725.png" title=" Tester enters 'Cassidy Hope' into Project Admin (completed)" width="1920"/>
+                <img src="d9e55e89bfa1455970b2f6a085a069169ef3330d1f8676321354e9bada149725.png" title=" Tester clicks on Add another" width="1920"/>
+                <img src="678526e11deae51414e848614971f8547e86019b4aa9e4a2ac41a39a063c5c2c.png" title=" Tester clicks on Add another (completed)" width="1920"/>
+                <img src="250cd858274f592b3dd80f4fe6edc2a03da0decae0d1c961de333f5120122295.png" title=" Tester enters 'Luke Wright' into Project Admin2" width="1920"/>
+                <img src="69ff7816653240d1151172bc654b4322b2d77fd3b9fc955d73b66f3e4fa46b63.png" title=" Tester enters 'Luke Wright' into Project Admin2 (completed)" width="1920"/>
+                <img src="69ff7816653240d1151172bc654b4322b2d77fd3b9fc955d73b66f3e4fa46b63.png" title=" Tester enters 'Description project' into Description project" width="1920"/>
+                <img src="f13d17e7f0466fa4afc9b3433f1ddba69a2bbb431847f64bf0290dd38f4de5a8.png" title=" Tester enters 'Description project' into Description project (completed)" width="1920"/>
+                <img src="f13d17e7f0466fa4afc9b3433f1ddba69a2bbb431847f64bf0290dd38f4de5a8.png" title=" Tester clicks on Save project" width="1920"/>
+                <img src="28c7517bab756f2dcff4ddcd6c4abe6e48325043821287a672a4afecb7337d16.png" title=" Tester clicks on Save project (completed)" width="1920"/>
+                <img src="28c7517bab756f2dcff4ddcd6c4abe6e48325043821287a672a4afecb7337d16.png" title=" Tester clicks on Copy" width="1920"/>
+                <img src="fe475d4b995685aa07001d9b41c56ddcdcef02a9f3e70ec9d39a54b79bf2c815.png" title=" Tester clicks on Copy (completed)" width="1920"/>
+                <img src="fe475d4b995685aa07001d9b41c56ddcdcef02a9f3e70ec9d39a54b79bf2c815.png" title=" Tester enters 'ACME Ltd - ACME Ltd' into Project name copy" width="1920"/>
+                <img src="f4931e51ea38e70bb3cd539a36a4a6542e675c3216facb99e323e65da19be742.png" title=" Tester enters 'ACME Ltd - ACME Ltd' into Project name copy (completed)" width="1920"/>
+                <img src="f4931e51ea38e70bb3cd539a36a4a6542e675c3216facb99e323e65da19be742.png" title=" Tester clicks on Project name copy activity" width="1920"/>
+                <img src="9b595df272970b769b99a82749272e7a5d5db203e710c5e7d4d057157970b28e.png" title=" Tester clicks on Project name copy activity (completed): <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 

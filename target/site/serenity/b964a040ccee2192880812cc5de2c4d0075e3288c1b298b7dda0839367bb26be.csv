@@ -1,3 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
 "yo como automatizador de pruebas","Para un empleado existente, programarle el período de vacaciones","ERROR","2021-10-24T02:53:19.561-05:00[America/Bogota]","0.0","18.75"
-"Creación de nuevo proyecto con dos administradores","Agregar nuevo proyecto","FAILURE","2021-10-24T23:18:20.375-05:00[America/Bogota]","0.0","44.77"
+"Creación de nuevo proyecto con dos administradores","Agregar nuevo proyecto","ERROR","2021-10-25T10:21:51.903-05:00[America/Bogota]","0.0","26.28"
