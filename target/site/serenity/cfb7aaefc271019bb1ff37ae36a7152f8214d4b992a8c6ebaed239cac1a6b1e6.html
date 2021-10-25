@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Yo como automatizador de pruebas","type":"feature","href":"cfb7aaefc271019bb1ff37ae36a7152f8214d4b992a8c6ebaed239cac1a6b1e6.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e4 scenarios\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"yo como automatizador de pruebas","type":"feature","href":"cfb7aaefc271019bb1ff37ae36a7152f8214d4b992a8c6ebaed239cac1a6b1e6.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e5 scenarios\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -217,7 +217,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-10-2021 01:33</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-10-2021 02:53</span>
     <br style="clear:left"/>
 </div>
 
@@ -240,8 +240,8 @@
                                 </div>
                             </div>
                             <div class="requirementNarrativeTitle">
-                                deseo probar la seccion de login de la aplicación orangeHRM<br />
-para verificar que la página cumpla los criterios de login
+                                requiero programar el periodo de vacaciones a un empleado<br />
+donde el sistema me arroje que ha sido exitosa la programación
                             </div>
 
                         </div>
@@ -274,6 +274,35 @@ para verificar que la página cumpla los criterios de login
 
                                             <div id="toc">
                                                 <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td style="width:95%;" class="toc-title">
+                                                                <a href="#e9f085ec9ea476056f25ac20a1ad7031d1987da482a9c628285edaae691d7769" title="View scenario details" >Para un empleado existente, programarle el período de vacaciones</a>
+                                                                     (1 example)
+
+                                                            </td>
+                                                            <td style="width:5%;">
+                                                                <table>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html"
+                                                                               title="View test results">
+                                                                            <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                                                            </a>
+
+                                                                        
+                                                                        </td>
+                                                                        <td>
+                                                                            <a style="margin-left:0.5em;padding-right: 1.5em;"
+                                                                               href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html"
+                                                                               title="View test results">
+                                                                                <i class="fas fa-search-plus"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
                                                         <tr>
                                                             <td style="width:95%;" class="toc-title">
                                                                 <a href="#8b9034b6a4d49d0fab0683a012907fcd0ce0156577007aa61f587faf9f14b172" title="View scenario details" >Inicio de sesion exitoso</a>
@@ -395,6 +424,56 @@ para verificar que la página cumpla los criterios de login
                                             </div>
 
                                             <h3>Scenario details</h3>
+
+                                                <div class="scenario-docs card" id="e9f085ec9ea476056f25ac20a1ad7031d1987da482a9c628285edaae691d7769">
+                                                    <div class="scenario-docs card-header error" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                <a href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html" title="View test results">Para un empleado existente, programarle el período de vacaciones</a>
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p><p>Given el automatizador inicia sesión se dirige al modulo leave</p>
+<table>
+<thead>
+<tr><th>username</th><th>{username}</th></tr>
+</thead>
+<tbody>
+<tr><td>password</td><td>{password}</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p><p>Then el usuario diligencia el formulario para la programación de las vacaciones</p>
+<table>
+<thead>
+<tr><th>Employee</th><th>{Employee}</th></tr>
+</thead>
+<tbody>
+<tr><td>Entitlement</td><td>{Entitlement}</td></tr>
+</tbody>
+</table>
+</p>
+                                                            <p>When el sistema arroja que se ha agregado el empleado al periodo de vacaciones</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>username</th><th>password</th><th>Employee</th><th>Entitlement</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>Admin</td><td>admin123</td><td>Aaliyah Haq</td><td>6</td><td> </td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
                                                 <div class="scenario-docs card" id="8b9034b6a4d49d0fab0683a012907fcd0ce0156577007aa61f587faf9f14b172">
                                                     <div class="scenario-docs card-header success" style="min-height:1.5em;">
@@ -570,10 +649,10 @@ para verificar que la página cumpla los criterios de login
                                             </div>
                                             <script>
 
-                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                var labels = ['80%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '20%', ' ', ' ', ' '];
                                                 // Our series array that contains series objects or in this case series data arrays
 
-                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 1}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
 
                                                 // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
                                                 // as you saw in the previous example
@@ -615,7 +694,7 @@ para verificar que la página cumpla los criterios de login
                                                                                 class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
                                                 <td class="automated-stats">4</td>
-                                                <td class="automated-stats">100%</td>
+                                                <td class="automated-stats">80%</td>
                                             </tr>
                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -639,8 +718,8 @@ para verificar que la página cumpla los criterios de login
                                                 <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
-                                                                            <td colspan="3"><i
-                                                                                class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                             <td colspan="3"><a href="c5c4aae355efea01607058e4eadfc172b4b5640b9af744816852ab43ff7542d4.html"><i
+                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                             </td>
 
                                             </tr>
@@ -653,12 +732,12 @@ para verificar que la página cumpla los criterios de login
                                                 <td class="automated-stats">0</td>
                                                 <td class="automated-stats"> </td>
                                             <tr>
-                                                                <td class="aggregate-result-count indented-error-category">
-                                                                    <i
-                                                                            class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
-                                                                </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
+                                                                    <td class="aggregate-result-count indented-error-category">
+                                                                        <a href="c14af6b2ff2e7e2ed4b2320c76c6cf4ff7c4fcd25b1a9ab905e1a385073c3cba.html"><i
+                                                                                class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken</a>
+                                                                    </td>
+                                                <td class="automated-stats">1</td>
+                                                <td class="automated-stats">20%</td>
                                             <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -669,7 +748,7 @@ para verificar que la página cumpla los criterios de login
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">5</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -691,11 +770,11 @@ para verificar que la página cumpla los criterios de login
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>33s</td>
-                                                        <td>28s</td>
-                                                        <td>4s</td>
-                                                        <td>11s</td>
-                                                        <td>8s</td>
+                                                        <td> 1m 6s</td>
+                                                        <td> 19h  59m 39s</td>
+                                                        <td>2ms</td>
+                                                        <td>18s</td>
+                                                        <td>13s</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -718,14 +797,27 @@ para verificar que la página cumpla los criterios de login
                                                 </tr>
                                                 </thead>
                                                 <tbody>
+                                                <tr class="scenario-result ERROR">
+                                                    <td>
+                                                            <a href="4b18f90f897d995ef5c759aceda08d5b5875ac46e8d750ea028d04168956fa67.html">Para un empleado existente, programarle el período de vacaciones</a>
+                                                               (1 example)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>02:53:19</td>
+                                                    <td>18s 751ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></a> <span
+                                                                style="display:none">ERROR</span>
+                                                    </td>
+                                                </tr>
                                                 <tr class="scenario-result SUCCESS">
                                                     <td>
                                                             <a href="c0b4f14df2dd59ad32f9d5b1bee448d8df291b5a19655b8f4e224a552f5175d4.html">Inicio de sesion exitoso</a>
                                                                (1 example)
                                                     </td>
                                                     <td>2</td>
-                                                    <td>01:33:54</td>
-                                                    <td>12s 045ms</td>
+                                                    <td>22:52:18</td>
+                                                    <td>19s 276ms</td>
                                                     <td>
                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                 style="display:none">SUCCESS</span>
@@ -737,8 +829,8 @@ para verificar que la página cumpla los criterios de login
                                                                (1 example)
                                                     </td>
                                                     <td>2</td>
-                                                    <td>01:34:06</td>
-                                                    <td>8s 382ms</td>
+                                                    <td>22:52:37</td>
+                                                    <td>10s 836ms</td>
                                                     <td>
                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                 style="display:none">SUCCESS</span>
@@ -750,8 +842,8 @@ para verificar que la página cumpla los criterios de login
                                                                (1 example)
                                                     </td>
                                                     <td>2</td>
-                                                    <td>01:34:14</td>
-                                                    <td>7s 906ms</td>
+                                                    <td>22:52:48</td>
+                                                    <td>10s 624ms</td>
                                                     <td>
                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                 style="display:none">SUCCESS</span>
@@ -763,8 +855,8 @@ para verificar que la página cumpla los criterios de login
                                                                (1 example)
                                                     </td>
                                                     <td>2</td>
-                                                    <td>01:34:22</td>
-                                                    <td>5s 627ms</td>
+                                                    <td>22:52:58</td>
+                                                    <td>7s 119ms</td>
                                                     <td>
                                                             <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
                                                                 style="display:none">SUCCESS</span>

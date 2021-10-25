@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="Creación de nuevo proyecto con dos administradores" skipped="0" tests="1" time="44.77" timestamp="2021-10-24 11:18:20"><testcase name="Agregar nuevo proyecto"><failure message="Expected enabled element was not enabled" type="net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException">Expected enabled element was not enabled</failure><system-err>Expected enabled element was not enabled&#13;
+co.com.sofka.task.project.AddProjects.performAs(AddProjects.java:58)&#13;
+co.com.sofka.stepdefinition.projects.ProjectsStepDefinition.agregaUnNuevoProyectoHaciendoLaCreacionDeUnClienteEIngresandoMinimoDosAdministradoresDeProyecto(ProjectsStepDefinition.java:45)&#13;
+io.cucumber.java.Invoker.invoke(Invoker.java:27)&#13;
+io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)&#13;
+io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)&#13;
+io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)&#13;
+io.cucumber.core.runner.TestStep.run(TestStep.java:49)&#13;
+io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)&#13;
+io.cucumber.core.runner.TestCase.run(TestCase.java:51)&#13;
+io.cucumber.core.runner.Runner.runPickle(Runner.java:67)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)&#13;
+io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)&#13;
+io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)&#13;
+</system-err></testcase></testsuite>

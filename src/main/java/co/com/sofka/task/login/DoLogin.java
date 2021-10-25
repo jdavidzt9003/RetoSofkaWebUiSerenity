@@ -12,8 +12,6 @@ public class DoLogin implements Task {
     private String username;
     private String password;
 
-    LoginUserInterfaces loginuserinterfaces;
-
     public DoLogin usingUsername(String username) {
         this.username = username;
         return this;

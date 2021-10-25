@@ -38,6 +38,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/task/addentitlements/FillFormAddLeaveEntitlements.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/task/addentitlements/OpenAddEntitlements.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/task/login/DoLogin.java">
           <value>
             <set />
@@ -53,6 +63,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/task/project/AddProjects.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/task/project/OpenProjects.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/userinterfaces/addentitlements/AddEntitlements.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/userinterfaces/addentitlements/AddEntitlementsUserInterfaces.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/userinterfaces/landingpage/LandingPageUserInterfaces.java">
           <value>
             <set />
@@ -63,12 +93,47 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/userinterfaces/projects/ProjectsUserInterfaces.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/co/com/sofka/util/ValidationMessages.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/runner/addentitlements/AddEntitlements.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/runner/addentitlements/AddEntitlementsStepDefinition.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/runner/addentitlements/AddEntitlementsTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/runner/login/LoginTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/runner/projects/ProjectsTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinition/addentitlements/AddEntitlements.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinition/addentitlements/AddEntitlementsStepDefinition.java">
           <value>
             <set />
           </value>
@@ -83,12 +148,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinition/projects/ProjectsStepDefinition.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/java/co/com/sofka/stepdefinition/setup/SetUp.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/test/resources/features/AddLeaveEntitlement.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/test/resources/features/Login.feature">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/resources/features/Projects.feature">
           <value>
             <set />
           </value>
