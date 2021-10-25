@@ -69,7 +69,7 @@ public class ProjectsUserInterfaces extends PageObject {
 
     public static final Target PROJECT_NAME_COPY = Target
             .the("Project name copy")
-            .located(By.id("projectName"));
+            .located(By.xpath("//*[@id=\"projectName\"]"));
 
     public static final Target COPY_ACTIVITY = Target
             .the("Project name copy activity")

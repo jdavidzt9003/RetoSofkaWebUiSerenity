@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
+import org.openqa.selenium.Keys;
 
 import static co.com.sofka.userinterfaces.projects.ProjectsUserInterfaces.*;
 
@@ -86,8 +87,9 @@ public class AddProjects implements Task {
                 Click.on(COPY),
 
                 Scroll.to(PROJECT_NAME_COPY),
-                Enter.theValue(projectNameCopy).into(PROJECT_NAME_COPY),
+                Enter.theValue(projectNameCopy).into(PROJECT_NAME_COPY).thenHit(Keys.ENTER),
 
+                Scroll.to(COPY_ACTIVITY),
                 Click.on(COPY_ACTIVITY)
         );
     }
